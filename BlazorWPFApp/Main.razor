@@ -1,11 +1,19 @@
-﻿<Router AppAssembly="@typeof(Main).Assembly">
-    <Found Context="routeData">
-        <RouteView RouteData="@routeData" />
-    </Found>
-    <NotFound>
-        <p>Sorry, there's nothing at this address.</p>
-    </NotFound>
-</Router>
+﻿@using Microsoft.AspNetCore.Components.Routing
+
+<div style="padding: 20px;">
+    <Router AppAssembly="@typeof(Main).Assembly">
+        <Found Context="routeData">
+            <RouteView RouteData="@routeData" />
+        </Found>
+        <NotFound>
+            <div class="container">
+                <h1>404 - Page Not Found</h1>
+                <p class="subtitle">The page you're looking for doesn't exist.</p>
+                <a href="/" class="btn">Go Home</a>
+            </div>
+        </NotFound>
+    </Router>
+</div>
 
 @*    
 ```
@@ -13,7 +21,7 @@
 Your project structure should look like this:
 ```
 
-MyBlazorWpfApp/
+BlazorWPFApp/
 ├── Pages/
 │   └── Index.razor
 ├── wwwroot/

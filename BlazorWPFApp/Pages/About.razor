@@ -1,0 +1,53 @@
+﻿@page "/about"
+
+<div class="container">
+    <h1>📱 About This App</h1>
+    <p class="subtitle">Blazor Hybrid WPF Application</p>
+
+    <div class="card">
+        <h3 style="color: #667eea; margin-bottom: 15px;">✨ Features</h3>
+        <ul style="line-height: 2; color: #555;">
+            <li>🚀 Built with Blazor and WPF</li>
+            <li>🎨 Modern, responsive design</li>
+            <li>⚡ Fast and efficient</li>
+            <li>💻 Cross-platform desktop capabilities</li>
+            <li>🔧 Easy to extend and customize</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3 style="color: #764ba2; margin-bottom: 15px;">🛠️ Technology Stack</h3>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+            <div style="background: white; padding: 15px; border-radius: 10px; text-align: center;">
+                <strong>Frontend</strong><br />
+                Blazor WebAssembly
+            </div>
+            <div style="background: white; padding: 15px; border-radius: 10px; text-align: center;">
+                <strong>Desktop</strong><br />
+                WPF (.NET 8.0)
+            </div>
+            <div style="background: white; padding: 15px; border-radius: 10px; text-align: center;">
+                <strong>Language</strong><br />
+                C# & Razor
+            </div>
+            <div style="background: white; padding: 15px; border-radius: 10px; text-align: center;">
+                <strong>UI</strong><br />
+                Custom CSS
+            </div>
+        </div>
+    </div>
+
+    <button class="btn" @onclick="GoHome">
+        🏠 Back to Home
+    </button>
+</div>
+
+@code {
+    [Inject]
+    private NavigationManager? NavigationManager { get; set; }
+
+    private void GoHome()
+    {
+        NavigationManager?.NavigateTo("/");
+    }
+}

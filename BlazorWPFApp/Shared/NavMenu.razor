@@ -1,0 +1,20 @@
+﻿<div class="nav-menu">
+    <nav>
+        <a href="/" class="nav-link @GetActiveClass("/")">
+            🏠 Home
+        </a>
+        <a href="/about" class="nav-link @GetActiveClass("/about")">
+            ℹ️ About
+        </a>
+    </nav>
+</div>
+
+@code {
+    [Inject]
+    private NavigationManager? NavigationManager { get; set; }
+
+    private string GetActiveClass(string path)
+    {
+        return NavigationManager?.Uri.EndsWith(path) == true ? "active" : "";
+    }
+}

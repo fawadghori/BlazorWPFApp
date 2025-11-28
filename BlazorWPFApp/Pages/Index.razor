@@ -1,16 +1,52 @@
 ﻿@page "/"
 
-<h1>Welcome to Blazor Hybrid WPF!</h1>
+<div class="container">
+    <h1>🚀 Blazor Hybrid</h1>
+    <p class="subtitle">Modern Desktop Application with WPF</p>
 
-<p>Current count: @currentCount</p>
+    <div class="card">
+        <h2 style="text-align: center; color: #764ba2; margin-bottom: 20px;">Counter Demo</h2>
+        <div class="counter-display">@currentCount</div>
 
-<button class="btn" @onclick="IncrementCount">Click me</button>
+        <div class="button-group">
+            <button class="btn" @onclick="IncrementCount">
+                ➕ Increment
+            </button>
+            <button class="btn btn-secondary" @onclick="DecrementCount">
+                ➖ Decrement
+            </button>
+        </div>
+
+        <button class="btn" @onclick="ResetCount" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); margin-top: 10px;">
+            🔄 Reset
+        </button>
+    </div>
+
+    <div class="info-text">
+        <p>✨ Built with Blazor + WPF</p>
+        <p>Current count: <strong>@currentCount</strong> | Total clicks: <strong>@totalClicks</strong></p>
+    </div>
+</div>
 
 @code {
     private int currentCount = 0;
+    private int totalClicks = 0;
 
     private void IncrementCount()
     {
         currentCount++;
+        totalClicks++;
+    }
+
+    private void DecrementCount()
+    {
+        currentCount--;
+        totalClicks++;
+    }
+
+    private void ResetCount()
+    {
+        currentCount = 0;
+        totalClicks++;
     }
 }
