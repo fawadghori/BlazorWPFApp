@@ -1,0 +1,27 @@
+﻿<Router AppAssembly="@typeof(Main).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" />
+    </Found>
+    <NotFound>
+        <p>Sorry, there's nothing at this address.</p>
+    </NotFound>
+</Router>
+
+@*    
+```
+## Complete File Structure Check
+Your project structure should look like this:
+```
+
+MyBlazorWpfApp/
+├── Pages/
+│   └── Index.razor
+├── wwwroot/
+│   ├── css/
+│   │   └── app.css
+│   └── index.html
+├── _Imports.razor
+├── Main.razor
+├── MainWindow.xaml
+├── MainWindow.xaml.cs
+└── App.xaml *@

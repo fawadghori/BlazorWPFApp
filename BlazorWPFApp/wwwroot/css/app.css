@@ -1,0 +1,22 @@
+﻿html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #512bd4;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #512bd4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3a1f99;
+}
